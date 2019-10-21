@@ -89,8 +89,6 @@ function startWebRTC(isOfferer) {
     setupDataChannel();
   } else {
     // If user is not the offerer let wait for a data channel
-      dataChannel = event.channel;
-      setupDataChannel();
     pc.ondatachannel = event => {
       dataChannel = event.channel;
       setupDataChannel();
